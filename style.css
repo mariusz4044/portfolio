@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    background-color: rgba(32, 0, 36, 0.952);
+    font-family: monospace;
+}
+
+#nav-menu {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(32, 30, 30);
+    display: flex;
+    color: rgb(167, 167, 167);
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-shadow: 0px 1px 8px -3px rgb(0,0,0);
+    -moz-box-shadow: 0px 1px 8px -3px rgb(0,0,0);
+    box-shadow: 0px 1px 8px -3px rgb(0,0,0);
+    justify-content: space-between;
+}
+
+main {
+    color: #d4d4d4;
+}
+
+#about-box img {
+    height: 20%;
+    width: 40%;
+}
+
+#nav-left {
+    width: 10%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 10px;
+    font-size: 1.1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+
+.flex-center-horizontal {
+    justify-content: center;
+    align-items: center;
+}
+
+#about-information {
+    font-size: 1.3rem;
+}
+
+bold {
+    color: #ff0076;
+}
+
+#nav-middle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    justify-content: flex-end;
+}
+
+#nav-left b {
+    transition: all 0.2s ease;
+}
+
+#nav-left b:hover {
+    transform: translateZ(50deg);
+    transform: rotate3d(1, 1, 1, 10deg);
+}
+
+#nav-middle div {
+    margin-right: 30px;
+    transition: all 0.2s ease;
+}
+
+#nav-middle div:hover {
+    color: orange;
+    transform: scale(1.1);
+}
