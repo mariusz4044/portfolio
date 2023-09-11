@@ -81,8 +81,67 @@ main {
 }
 
 
-.assets-container:hover span{
-   opacity: 1;
+#stack:hover span {
+    opacity: 1;
+}
+
+.show {
+    animation: showText 1.5s ease;
+}
+
+.showAssets {
+    animation: showAssetsItems 2s ease;
+}
+
+.assets-container:nth-child(1) {
+    animation-duration: 1.2s;
+}
+
+.assets-container:nth-child(2) {
+    animation-duration: 1.4s;
+}
+
+.assets-container:nth-child(3) {
+    animation-duration: 1.6s;
+}
+
+.assets-container:nth-child(4) {
+    animation-duration: 1.8s;
+}
+
+.assets-container:nth-child(5) {
+    animation-duration: 2s;
+}
+
+.assets-container:nth-child(6) {
+    animation-duration: 2.2s;
+} 
+
+.assets-container:nth-child(7) {
+    animation-duration: 2.4s;
+}
+
+@keyframes showText {
+    0% { 
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes showAssetsItems {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }  
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    } 
 }
 
 #stack-tolls {
