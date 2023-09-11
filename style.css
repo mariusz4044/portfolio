@@ -1,7 +1,12 @@
 body {
     margin: 0;
-    background-color: rgba(32, 0, 36, 0.952);
+    background-color: rgb(7 7 14 / 95%);
     font-family: monospace;
+}
+
+:root {
+    --boldColor: orange;
+    --textShadow: 0 3px 0 rgba(0,0,0,.25);
 }
 
 #nav-menu {
@@ -24,9 +29,11 @@ main {
 }
 
 #about-box img {
-    height: 20%;
+    height: 50%;
     width: 40%;
+    border-radius: 25%;
 }
+
 
 #nav-left {
     width: 10%;
@@ -42,6 +49,39 @@ main {
     display: flex;
 }
 
+.w-50 {
+    width: 50%;
+}
+
+.m-top-1 {
+    margin-top: 10px;
+}
+
+
+.m-top-2 {
+    margin-top: 20px;
+}
+
+.m-top-3 {
+    margin-top: 30px;
+}
+
+.m-top-4 {
+    margin-top: 40px;
+}
+
+.m-top-5 {
+    margin-top: 50px;
+}
+
+.m-top-6 {
+    margin-top: 60px;
+}
+
+.m-top-7 {
+    margin-top: 70px;
+}
+
 .flex-row {
     flex-direction: row;
 }
@@ -50,6 +90,10 @@ main {
     flex-direction: column;
 }
 
+.vh-100 {
+    height: calc(100vh - 70px);
+    /* 70px nav bar */
+}
 
 .w-100 {
     width: 100%;
@@ -60,17 +104,32 @@ main {
 }
 
 
-.flex-center-horizontal {
-    justify-content: center;
+.center-horiz {
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #about-information {
     font-size: 1.3rem;
 }
 
+#about-information b {
+    font-size: 2.5rem;
+    text-shadow: var(--textShadow);
+}
+
+#about-information p {
+    max-width: 90%;
+}
+
 bold {
-    color: #ff0076;
+    color: var(--boldColor);
+}
+
+
+.padding-1 {
+    padding: 10px;
 }
 
 #nav-middle {
