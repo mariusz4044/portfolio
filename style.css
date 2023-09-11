@@ -1,16 +1,25 @@
 body {
     margin: 0;
     background-color: rgb(7 7 14 / 95%);
-    font-family: monospace;
+    font-family: system-ui;
+    margin-top: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
+    --borderBottom: 1px solid #45454562;
     --boldColor: orange;
     --textShadow: 0 3px 0 rgba(0,0,0,.25);
+    --imageShadow: 2px 0px 15px 0px rgb(0 0 0);
+    --mask: radial-gradient(143.11px at 50% 192.00px,#000 99%,#0000 101%) calc(50% - 128px) 0/256px 100%,
+    radial-gradient(143.11px at 50% -128px,#0000 99%,#000 101%) 50% 64px/256px 100% repeat-x;
 }
 
 #nav-menu {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 70px;
     background-color: rgb(32, 30, 30);
@@ -22,16 +31,85 @@ body {
     -moz-box-shadow: 0px 1px 8px -3px rgb(0,0,0);
     box-shadow: 0px 1px 8px -3px rgb(0,0,0);
     justify-content: space-between;
+    top: 0px;
 }
 
 main {
     color: #d4d4d4;
 }
 
+.font-size-3 {
+    font-size: 3rem;
+}
+
+.font-size-2 {
+    font-size: 2rem;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.l-5 {
+    position: relative;
+    left: 5%;
+}
+
+.font-size-1 {
+    font-size: 1.5rem;
+}
+
+.assets-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.assets-container {
+    transition: all 0.5s ease;
+}
+
+.assets-container span{
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+.assets-container img:hover {
+    filter: drop-shadow(0 0 0.5rem rgb(109, 109, 109));
+}
+
+
+.assets-container:hover span{
+   opacity: 1;
+}
+
+#stack-tolls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    justify-items: center;
+}
+
+.assets-container {
+    display: flex;
+    max-width: 80px;
+    max-height: 80px;
+    flex-direction: column;
+}
+
+#experience-box {
+    background-color: rgb(7 7 14 / 95%);
+    text-align: center;
+    justify-content: center;
+}
+
 #about-box img {
     height: 50%;
     width: 40%;
-    border-radius: 25%;
+    border-radius: 20px;
+    box-shadow: var(--imageShadow);
+    object-fit: cover;
 }
 
 
@@ -92,7 +170,6 @@ main {
 
 .vh-100 {
     height: calc(100vh - 70px);
-    /* 70px nav bar */
 }
 
 .w-100 {
@@ -103,11 +180,19 @@ main {
     height: 100%;
 }
 
+.flex-center-w {
+    align-items: center;
+}
 
 .center-horiz {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.content-box{
+    border-top: var(--borderBottom);
+    box-sizing: border-box;
 }
 
 #about-information {
