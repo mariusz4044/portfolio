@@ -19,6 +19,7 @@ html {
 }
 
 #nav-menu {
+    z-index: 2;;
     position: fixed;
     width: 100%;
     height: 70px;
@@ -98,27 +99,27 @@ main {
 }
 
 .assets-container:nth-child(2) {
-    animation-duration: 1.4s;
+    animation-duration: 1.3s;
 }
 
 .assets-container:nth-child(3) {
-    animation-duration: 1.6s;
+    animation-duration: 1.4s;
 }
 
 .assets-container:nth-child(4) {
-    animation-duration: 1.8s;
+    animation-duration: 1.5s;
 }
 
 .assets-container:nth-child(5) {
-    animation-duration: 2s;
+    animation-duration: 1.6;
 }
 
 .assets-container:nth-child(6) {
-    animation-duration: 2.2s;
+    animation-duration: 1.7;
 } 
 
 .assets-container:nth-child(7) {
-    animation-duration: 2.4s;
+    animation-duration: 1.8s;
 }
 
 @keyframes showText {
@@ -228,11 +229,94 @@ main {
 }
 
 .vh-100 {
-    height: calc(100vh - 70px);
+    height: 100vh;
 }
 
 .w-100 {
     width: 100%;
+}
+
+#projects-container .project-image{
+    width:100%;
+    object-fit: contain;
+    min-width: 350px;
+    max-width: 550px;
+}
+
+.project-box label{
+    position: absolute;
+    top: -20%;
+    font-weight: 600;
+    background: #000000bb;
+    height: calc(90% - 30px);
+    transition: all 0.5s ease;
+    padding: 10px;
+    opacity: 0;
+    color: white;
+}
+
+
+.stack-list img, .stack-list a{
+    width: 6%;
+    object-fit: contain;
+}
+
+.stack-list a {
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+    color: orange;
+    opacity: 0.75;
+    bottom: 0.25px;
+}
+
+.stack-list a img {
+    width: 100%;
+    height: 100;
+}
+
+.stack-list {
+    width: 100%;
+    height: 10%;
+    bottom: -50px;
+    display: flex;
+    position: absolute;
+    transition: all 0.5s ease;
+    background: #000000bb;
+    padding: 5px 0 5px 0;
+    justify-content: flex-end;
+    grid-gap: 5px;
+    opacity: 0;
+}
+
+.project-box:hover .stack-list,label {
+    bottom: 0;
+    opacity: 1;
+}
+
+.project-box:hover label {
+    top: 0;
+    opacity: 1;
+}
+
+.project-box {
+    overflow: hidden;
+    width: auto;
+    position: relative;
+    box-shadow: var(--imageShadow);
+}
+
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-items: center;
+    align-items: center;
+    grid-gap: 40px;
+    margin-bottom: 10px;
+}
+
+.m-bottom-6 {
+    margin-bottom:60px;
 }
 
 .h-100 {
@@ -252,6 +336,8 @@ main {
 .content-box{
     border-top: var(--borderBottom);
     box-sizing: border-box;
+    min-height: 100%;
+    /* overflow: hidden; */
 }
 
 #about-information {

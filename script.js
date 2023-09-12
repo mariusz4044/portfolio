@@ -14,6 +14,10 @@
     document.querySelector("#about-box").scrollIntoView();
   });
 
+  navProjects.addEventListener("click", () => {
+    document.querySelector("#projects-box").scrollIntoView();
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (
