@@ -5,6 +5,8 @@
   const navContact = document.querySelector("#contact");
   const observeElements = document.querySelectorAll(".observeBased");
   const observeElementsAssets = document.querySelectorAll(".observeAssets");
+  const mobileIcon = document.querySelector(`#mobile-open`);
+  const mainElement = document.querySelector("main");
 
   navExperience.addEventListener("click", () => {
     document.querySelector("#experience-box").scrollIntoView();
@@ -16,6 +18,15 @@
 
   navProjects.addEventListener("click", () => {
     document.querySelector("#projects-box").scrollIntoView();
+  });
+
+  navContact.addEventListener("click", () => {
+    document.querySelector("#contact-box").scrollIntoView();
+  });
+
+  mainElement.addEventListener("click", () => {
+    //Click everywhere close mobile navbar.
+    document.querySelector("#mobile-toggle").checked = false;
   });
 
   const observer = new IntersectionObserver((entries) => {
