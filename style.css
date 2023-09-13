@@ -398,8 +398,16 @@ bold {
 #mobile-open {
     position: absolute;
     left: 20px;
-    top: calc(40px - 16px);
+    top: calc(40px - 20px);
     display: none;
+    background-color: rgb(45 45 45);
+    border: 1px solid dark;
+    padding: 5px 5px 0 5px;
+    border-radius: 8px;
+    border: 1px solid #414141;
+}
+
+#mobile-open span {
     transition: all 0.5s ease;
 }
 
@@ -429,11 +437,12 @@ bold {
         height: 300px;
     }
 
-    #mobile-toggle:checked ~ #nav-menu #mobile-open {
+    #mobile-toggle:checked ~ #nav-menu #mobile-open span {
         transform: rotate(90deg);
     }
 
     #mobile-toggle:checked ~ #nav-menu #nav-middle {
+        display: flex;
         opacity: 1;
         transform: translateX(0);
     }
@@ -449,6 +458,7 @@ bold {
     }
 
     #nav-middle {
+        display: none;
         opacity: 0;
         flex-direction: column;
     }
@@ -490,7 +500,7 @@ bold {
 
 @media screen and (max-width:1100px){
     #projects-container  {
-     max-height: 70%;
+        max-height: 70%;
     }
 
     #about-box {
