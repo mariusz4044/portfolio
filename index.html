@@ -5,55 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/itim" rel="stylesheet">
   </head>
   <body>
-    <input type="checkbox" id="mobile-toggle" />
     <nav id="nav-menu">
       <div id="nav-left">
-        <span class="material-symbols-outlined">data_object</span>
+        <i class="fa-solid fa-code"></i>
         <b>FrontEnd Dev.</b>
       </div>
       <div id="nav-middle">
-        <div id="about">About</div>
-        <div id="experience">Experience</div>
-        <div id="projects">Projects</div>
-        <div id="contact">Contact</div>
-      </div>
-      <div id="mobile-open">
-        <span class="material-symbols-outlined"> menu </span>
+        <div id="about" class="item-nav">
+          <i class="fa-solid fa-user"></i>
+          <label>About</label>
+        </div>
+        <div id="experience" class="item-nav">
+          <i class="fa-solid fa-layer-group"></i>
+          <label>Experience</label>
+        </div>
+        <div id="projects" class="item-nav">
+          <i class="fa-solid fa-code-branch"></i>
+          <label>Projects</label>
+        </div>
+        <div id="contact" class="item-nav">
+          <i class="fa-solid fa-envelope"></i>
+          <label>Contact</label>
+        </div>
       </div>
     </nav>
     <main>
-      <div class="w-100 vh-100 flex center-horiz content-box" id="about-box">
-        <div id="about-information" class="w-50 padding-1">
-          <h1 class="observeBased">
-            Hi, <bold>I'm FullStack</bold> programmer!
-          </h1>
-          <p class="observeBased">
-            I am a web developer with 5 years of experience with JavaScript. I
-            love coding and try to provide cool solutions to users. I'm also on
-            the wave of this ever-changing front-end development industry!
-          </p>
+      <div class="w-100 vh-100 flex center-horiz" id="about-box">
+        <canvas id="canv"></canvas>
+        <div id="planet-box">
+          <img src="./assets/planet1.webp" id="planet1"  alt="planet image">
+          <img src="./assets/planet2.webp" id="planet2"  alt="planet image">
+          <img src="./assets/planet3.webp" id="planet3"  alt="planet image">
+          <img src="./assets/planet4.webp" id="planet4"  alt="planet image">
+          <img src="./assets/planet5.webp" id="planet5"  alt="planet image">
+          <img src="./assets/planet6.webp" id="planet6"  alt="planet image">
         </div>
-        <img
-          src="./assets/image_1.webp"
-          alt="image programmer"
-          class="w-50 observeAssets" />
+
+       <div class=" flex center-horiz " id="main-box">
+       <div class="about-left w-30 observeBased">
+         <label class="big-text">Hi, I'm <strong>FullStack</strong> developer!</label>
+         <span>I am a web developer with 5 years of experience in JavaScript. I enjoy coding and strive to offer innovative solutions to users. I'm also riding the wave of this ever-evolving front-end development industry!</span>
+         <button>
+           <label>About me</label>
+           <img src="./assets/user-icon.png" alt="user icon">
+         </button>
+       </div>
+        <div class="about-right">
+           <div id="left-images">
+             <div class="tech-container showAssets">
+               <img src="./assets/responsive-design.png" alt="icon">
+             </div>
+             <div class="tech-container showAssets">
+               <img src="./assets/layers.png" alt="icon">
+             </div>
+           </div>
+          <div id="right-images">
+            <div class="tech-container showAssets">
+              <img src="./assets/programming.png" alt="icon">
+            </div>
+            <div class="tech-container showAssets">
+              <img src="./assets/tablet.png" alt="icon">
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
       <div
         class="w-100 vh-100 flex flex-col center-horiz content-box"
         id="experience-box">
         <h1 class="font-size-3 observeBased">My experience!</h1>
         <p class="font-size-1 w-50 observeBased">
-          Hi! I have been programming with javascipt for 5 years, my adventure
-          began with the creation of scripts for online games, then I moved on
-          to create scripts based on node.js, I spent several years programming
-          bots for various online games operating on the principle of requests.
-          For several years I have been creating websites based on Vue.js v3
-          written from basics. I will show some of my projects below :)
+          Hi, I'm a hobbyist JavaScript programmer with over 5 years of experience coding applications in this language. 
+          My journey into programming began with creating scripts for games, and then I transitioned into more advanced applications using Node.js. 
+          For the past few years, I've been working as a full-stack developer with a focus on Vue.
+          I can boast of several commercial projects, which will show below :)
         </p>
         <div id="stack" class="w-50">
           <h3 class="font-size-2 observeBased">My assets:</h3>
@@ -87,6 +116,14 @@
               <span>Puppeeter</span>
             </div>
             <div class="assets-container observeAssets">
+              <img src="./assets/playwright-logo.svg" alt="Playwright icon" />
+              <span>Playwright</span>
+            </div>
+            <div class="assets-container observeAssets">
+              <img src="./assets/postman.png" alt="Postman icon" />
+              <span>Postman</span>
+            </div>
+            <div class="assets-container observeAssets">
               <img src="./assets/github.webp" alt="Github icon" />
               <span>Github</span>
             </div>
@@ -108,20 +145,20 @@
               alt="Casino Online Image"
               class="project-image" />
             <label>
-              I have created an online casino that offers three different games,
-              a live chat feature, and a reward system. Players can now enjoy
-              various forms of entertainment, communicate with other players,
-              and earn rewards for their activity.
+              <b>Project: Casino online</b>
+              An advanced online casino for gaming, built on Vue.js. It features 4 random games, a chat, user settings, administrative menus for site management, a feature allowing users to send funds, manage visible elements, and much, much more. The casino was custom-built to the client's specifications.
+              <br>
+              <span class="sold-text m-top-3">The project has been sold.</span>
             </label>
             <div class="stack-list">
               <a href="https://margostar.pl/" target="_blank">
-                <span class="material-symbols-outlined"> captive_portal </span>
+                <img src="./assets/export.png" class="redirect-project" alt="icon"/>
               </a>
-              <img src="./assets/html.webp" />
-              <img src="./assets/css.webp" />
-              <img src="./assets/javascript.webp" />
-              <img src="./assets/vue.webp" />
-              <img src="./assets/linux.webp" />
+              <img src="./assets/html.webp" alt="icon"/>
+              <img src="./assets/css.webp" alt="icon"/>
+              <img src="./assets/javascript.webp" alt="icon"/>
+              <img src="./assets/vue.webp" alt="icon"/>
+              <img src="./assets/linux.webp" class="margin-right-10" alt="icon"/>
             </div>
           </div>
           <div class="project-box flex center-horiz observeAssets">
@@ -130,20 +167,22 @@
               alt="Casino Online Image"
               class="project-image" />
             <label>
-              The older casino, written several years ago, has 4 games and a
-              reward system.
+              <b>Project: Casino online</b>
+              An older casino built using JQuery, featuring 4 random games, a chat, an admin menu, user account settings, a ranking system, and a transaction tracking system. It was entirely created by me as a full-stack developer based on the client's requirements. Currently, the casino is expanding and has a substantial user base.
+              <br>
+              <span class="sold-text m-top-3">The project has been sold.</span>
             </label>
             <div class="stack-list">
               <a href="https://margocasino.pl/" target="_blank"
-                ><span class="material-symbols-outlined"> captive_portal </span>
+              >  <img src="./assets/export.png" class="redirect-project" alt="icon"/>
               </a>
-              <img src="./assets/html.webp" />
-              <img src="./assets/css.webp" />
-              <img src="./assets/javascript.webp" />
-              <img src="./assets/jquery.webp" />
-              <img src="./assets/icons8-node-js-144.webp" />
-              <img src="./assets/icons8-mongodb-144.webp" />
-              <img src="./assets/linux.webp" />
+              <img src="./assets/html.webp" alt="icon" />
+              <img src="./assets/css.webp" alt="icon"/>
+              <img src="./assets/javascript.webp" alt="icon"/>
+              <img src="./assets/jquery.webp" alt="icon"/>
+              <img src="./assets/icons8-node-js-144.webp" alt="icon"/>
+              <img src="./assets/icons8-mongodb-144.webp" alt="icon"/>
+              <img src="./assets/linux.webp" class="margin-right-10" alt="icon"/>
             </div>
           </div>
           <div class="project-box flex center-horiz observeAssets">
@@ -152,20 +191,20 @@
               alt="Libray Online Image"
               class="project-image" />
             <label>
-              Online library site, has sorting options, entire administrative
-              menu and reading integrity system with user profiles.
+              <b>Project: Library online</b>
+              A web library project with features such as pagination, filtering, reader profiles, progress tracking, a basic fraud prevention system for statistics, and a comment system that allows ratings from other readers. Additionally, the application included an admin panel for managing the entire library. I completed this project independently as a full-stack developer.
             </label>
             <div class="stack-list">
               <a href="https://github.com/mariusz4044/libray" target="_blank">
-                <img src="./assets/github.webp" />
+                <img src="./assets/github.webp" class="github-icon" alt="icon"/>
               </a>
-              <img src="./assets/html.webp" />
-              <img src="./assets/css.webp" />
-              <img src="./assets/javascript.webp" />
-              <img src="./assets/vue.webp" />
-              <img src="./assets/icons8-node-js-144.webp" />
-              <img src="./assets/icons8-mongodb-144.webp" />
-              <img src="./assets/linux.webp" />
+              <img src="./assets/html.webp" alt="icon"/>
+              <img src="./assets/css.webp" alt="icon"/>
+              <img src="./assets/javascript.webp" alt="icon"/>
+              <img src="./assets/vue.webp" alt="icon" />
+              <img src="./assets/icons8-node-js-144.webp" alt="icon"/>
+              <img src="./assets/icons8-mongodb-144.webp" alt="icon"/>
+              <img src="./assets/linux.webp" class="margin-right-10" alt="icon" />
             </div>
           </div>
           <div class="project-box flex center-horiz observeAssets">
@@ -174,18 +213,17 @@
               alt="Shop Online Image"
               class="project-image" />
             <label>
-              The old design of the online store, has login, rating of purchased
-              products, BLIK payment simulation, password reset and shopping
-              cart.
+              <b>Project: Online shop simulator</b>
+              A simple online store simulator featuring a product list, the ability to save products as favorites, a shopping cart, and filtering options. After logging in, it also included a quick checkout simulation feature.
             </label>
             <div class="stack-list">
               <a href="https://github.com/mariusz4044/shop" target="_blank">
-                <img src="./assets/github.webp" />
+                <img src="./assets/github.webp" class="github-icon" alt="icon"/>
               </a>
-              <img src="./assets/html.webp" />
-              <img src="./assets/css.webp" />
-              <img src="./assets/javascript.webp" />
-              <img src="./assets/vue.webp" />
+              <img src="./assets/html.webp" alt="icon"/>
+              <img src="./assets/css.webp" alt="icon"/>
+              <img src="./assets/javascript.webp" alt="icon"/>
+              <img src="./assets/vue.webp" class="margin-right-10" alt="icon"/>
             </div>
           </div>
           <div class="project-box flex center-horiz observeAssets">
@@ -194,32 +232,49 @@
               alt="Game Addon Online Image"
               class="project-image" />
             <label>
-              The old design of the online store, has login, rating of purchased
-              products, BLIK payment simulation, password reset and shopping
-              cart.
+              <b>Project: Game global addon</b>
+              An advanced add-on for the game "Margonem," used by all users on a specific server. It allowed for the saving of player battles along with their equipment, which were displayed in the top bar. Additionally, it featured clan and player rankings, the number of players and administrators online, and an advanced character switch system based on data scraping. The add-on required user account connected and confirmation identity.
             </label>
             <div class="stack-list">
               <a href="https://github.com/mariusz4044/global" target="_blank">
-                <img src="./assets/github.webp" />
+                <img src="./assets/github.webp" class="github-icon" alt="icon"/>
               </a>
-              <img src="./assets/html.webp" />
-              <img src="./assets/css.webp" />
-              <img src="./assets/javascript.webp" />
-              <img src="./assets/jquery.webp" />
-              <img src="./assets/icons8-node-js-144.webp" />
-              <img src="./assets/icons8-mongodb-144.webp" />
+              <img src="./assets/html.webp" alt="icon"/>
+              <img src="./assets/css.webp" alt="icon"/>
+              <img src="./assets/javascript.webp" alt="icon"/>
+              <img src="./assets/jquery.webp" alt="icon"/>
+              <img src="./assets/icons8-node-js-144.webp" alt="icon"/>
+              <img src="./assets/icons8-mongodb-144.webp" class="margin-right-10" alt="icon"/>
             </div>
           </div>
         </div>
       </div>
       <div
         id="contact-box"
-        class="w-100 vh-100 flex flex-col center-horiz content-box">
-        <h1 class="font-size-3 observeBased m-bottom-6">Contact</h1>
-        <div class="font-size-1 observeBased">Email: mariusz4044@gmail.com</div>
-        <div class="font-size-1 observeBased">-</div>
-        <div class="font-size-1 observeBased">
-          Github: https://github.com/mariusz4044
+        class="w-100 vh-100 flex flex-col center-horiz">
+        <div id="contact-container">
+          <h1 class="font-size-3 observeBased m-bottom-6">Contact</h1>
+          <div class="font-size-1 observeBased contact-box">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:mariusz4044@gmail.com" target="_blank">
+              mariusz4044@gmail.com
+            </a>
+            <label class="short-name">E-mail</label>
+          </div>
+          <div class="font-size-1 observeBased contact-box">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/mariusz4044" target="_blank">
+              mariusz4044
+            </a>
+            <label class="short-name">Github</label>
+          </div>
+          <div class="font-size-1 observeBased contact-box">
+            <i class="fa-brands fa-telegram"></i>
+            <a href="https://t.me/Vitaly_x13d" target="_blank">
+              Vitaly_x13d
+            </a>
+            <label class="short-name">Telegram</label>
+          </div>
         </div>
       </div>
     </main>
