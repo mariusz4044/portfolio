@@ -28,8 +28,8 @@
   });
 
   function changeCurrentTab(element) {
-    const tabs = ['main-box','stack','projects-box'];
-    const nav = ['about','experience','projects'];
+    const tabs = ['main-box','stack','projects-box','contact-box'];
+    const nav = ['about','experience','projects','contact'];
 
     tabs.forEach((tab,i)=>{
       const currentNavElement = document.querySelector(`#${nav[i]} .select-nav`);
@@ -77,25 +77,27 @@
     observeNavChange.observe(element);
   });
 
-  const dots = [];
+  let dots = [];
 
   //Create random stars
   const canvas = document.querySelector("#canv");
   const ctx = canvas.getContext("2d");
 
-  canvas.width = 1920;
-  canvas.height = 1080;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-  for (let i = 0; i < 500; i++) {
-    const x = Math.random() * canvas.width;
-    const y = Math.random() * canvas.height;
-    const radius = Math.random() * 2 + 0.2;
-    const opacity = Math.random() * 0.5 + 0.2;
-
-    dots.push({ x, y, radius, opacity, i });
-  }
 
   function draw() {
+    dots = [];
+    for (let i = 0; i < 500; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const radius = Math.random() * 2 + 0.2;
+      const opacity = Math.random() * 0.5 + 0.2;
+
+      dots.push({ x, y, radius, opacity, i });
+    }
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (const dot of dots) {
@@ -118,6 +120,20 @@
       }
     }
   }
+
+  window.addEventListener('resize', ()=>{
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    if(w<= 1900 || h<=1080) {
+      //generate only for big screens.
+      return;
+    }
+
+    canvas.width = w;
+    canvas.height = h;
+    draw()
+  }, false);
 
   draw();
 })();
