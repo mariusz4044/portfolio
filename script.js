@@ -28,7 +28,7 @@
   });
 
   function changeCurrentTab(element) {
-    const tabs = ['main-box','stack','projects-box','contact-box'];
+    const tabs = ['main-box','stack','projects-container','contact-box'];
     const nav = ['about','experience','projects','contact'];
 
     tabs.forEach((tab,i)=>{
@@ -83,8 +83,8 @@
   const canvas = document.querySelector("#canv");
   const ctx = canvas.getContext("2d");
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth + (window.innerWidth * 0.8); //Generate 8% more space for move background.
+  canvas.height = window.innerHeight + (window.innerHeight * 0.8);
 
 
   function draw() {

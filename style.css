@@ -168,7 +168,7 @@ main {
 /*    background: #363636;*/
     padding: 3px 18px 5px 18px;
     border-radius: 50px;
-    border: 2px solid #757575;
+    border: 1px solid #757575;
     display: flex;
     align-items: center;
     height: 40% !important;
@@ -197,7 +197,7 @@ main {
 }
 
 #experience-box,#contact-box {
-    background-color: rgb(7 7 14 / 95%);
+    background-color: #05050af2;
     text-align: center;
     justify-content: center;
 }
@@ -398,6 +398,7 @@ main {
 }
 
 #projects-box {
+    background: #18181e;
     height: 100%;
     padding-bottom: 100px;
 }
@@ -665,21 +666,21 @@ bold {
     align-items: center;
 }
 
-.item-nav::after{
+
+.item-nav .select-nav{
     content: '';
-    width: 100%;
-    height: 3px;
+    height: 2px;
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     left: 0;
     background: rgba(255, 255, 255, 0.7);
-    opacity: 0;
     user-select: none;
-    transition: opacity 0.3s ease-in;
+    transition: width 0.2s ease-in;
+    width: 0;
 }
 
-#nav-middle div:hover.item-nav::after{
-    opacity: 1;
+#nav-middle div:hover.item-nav .select-nav{
+   width: 100%;
 }
 
 .short-name {
@@ -725,6 +726,14 @@ bold {
 
 #mobile-slot {
     z-index: -1;
+}
+
+.item-nav label {
+    cursor: pointer;
+}
+
+.item-nav:hover {
+    color: #98def1;
 }
 
 @media screen and (max-width:600px){
