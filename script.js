@@ -5,10 +5,15 @@
   const navContact = document.querySelector("#contact");
   const observeElements = document.querySelectorAll(".observeBased");
   const observeElementsAssets = document.querySelectorAll(".observeAssets");
+  const redirectButton = document.querySelector('.about-left button');
+  const navOvserveElements = document.querySelectorAll('.nav-observer');
 
-  navExperience.addEventListener("click", () => {
-    document.querySelector("#experience-box").scrollIntoView();
+  [navExperience, redirectButton].forEach(el=> {
+    el.addEventListener("click", () => {
+      document.querySelector("#experience-box").scrollIntoView();
+    });
   });
+
 
   navAbout.addEventListener("click", () => {
     document.querySelector("#about-box").scrollIntoView();
@@ -22,27 +27,54 @@
     document.querySelector("#contact-box").scrollIntoView();
   });
 
+  function changeCurrentTab(element) {
+    const tabs = ['main-box','stack','projects-box'];
+    const nav = ['about','experience','projects'];
+
+    tabs.forEach((tab,i)=>{
+      const currentNavElement = document.querySelector(`#${nav[i]} .select-nav`);
+      if(tab === element.id) currentNavElement.style.width = '100%';
+      else currentNavElement.style.width = '0';
+    })
+  }
+
+  function isObserve(entry,type) {
+    if(!entry.target.classList.contains(type)) {
+      return false;
+    }
+
+    return true;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (
-        entry.isIntersecting &&
-        entry.target.classList.contains("observeBased")
-      ) {
+      if(!entry.isIntersecting) return;
+
+      if (isObserve(entry,"observeBased")) {
         entry.target.classList.add("show");
       }
 
-      if (
-        entry.isIntersecting &&
-        entry.target.classList.contains("observeAssets")
-      ) {
+      if (isObserve(entry,"observeAssets")) {
         entry.target.classList.add("showAssets");
       }
+
     });
   });
 
+  const observeNavChange = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      changeCurrentTab(entry.target);
+    });
+  });
+
+
   [...observeElements, ...observeElementsAssets].forEach((element) => {
-    console.log(element);
     observer.observe(element);
+  });
+
+  navOvserveElements.forEach((element) => {
+    observeNavChange.observe(element);
   });
 
   const dots = [];
