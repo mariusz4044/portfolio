@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b50029ba-cee8-4d69-9e93-2ddb4a6d4dac" name="Changes" comment="general update">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/share.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/abstract-gradient-landing-page-template.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bg.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/export.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/export.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/first_page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/first_page.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/five_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fontawesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/four_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/github.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/github.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons8-mongodb-144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons8-node-js-144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/javascript.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/jquery.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/puppeeter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="b50029ba-cee8-4d69-9e93-2ddb4a6d4dac" name="Changes" comment="general update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,6 +134,7 @@
       <workItem from="1708606993839" duration="6044000" />
       <workItem from="1708691040475" duration="2685000" />
       <workItem from="1708694150316" duration="24000" />
+      <workItem from="1708694257996" duration="218000" />
     </task>
     <task id="LOCAL-00001" summary="Add dynamic nav underline">
       <option name="closed" value="true" />
@@ -188,6 +165,29 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="General update" />
